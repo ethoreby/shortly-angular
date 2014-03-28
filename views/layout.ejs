@@ -1,19 +1,25 @@
 <!doctype html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
     <link rel="stylesheet" type="text/css" href="shortlyapp.min.css">
-
-    <script src="/lib/jquery.js"></script>
+    <script src="/lib/angular.min.js"></script>
+    <script src="/app.js"></script>
+    <!-- <script src="/lib/jquery.js"></script>
     <script src="/lib/underscore.js"></script>
-    <script src="/lib/backbone.js"></script>
+    <script src="/lib/backbone.js"></script>-->
     <script src="/lib/handlebars.js"></script>
 
   </head>
 
   <body>
     <h1>Shortly</h1>
+    <div ng-controller="linkController">
+      <li ng-repeat="link in links">
+        {{ link.title }}
+      </li>
+    </div>
     <%- body %>
   </body>
 </html>
