@@ -1,0 +1,24 @@
+Thu Mar 27 2014 10:52:44 GMT-0700 (PDT):
+{ [Error: Error: The host name shortly_deploy.azurewebsites.net is not valid.]
+  stack: [Getter/Setter],
+  __frame: 
+   { name: 'createSite',
+     line: 383,
+     file: '/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/site._js',
+     prev: 
+      { name: '__4',
+        line: 200,
+        file: '/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/site._js',
+        prev: undefined,
+        active: false,
+        offset: 50,
+        col: 12 },
+     active: false,
+     offset: 20,
+     col: 21 },
+  rawStack: [Getter] }
+Error: Error: The host name shortly_deploy.azurewebsites.net is not valid.
+    at createSite__3 (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/websites/websitesclient._js:299:34)
+    at createSite (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/site._js:403:21)
+    at __4 (/Users/HR10/.nvm/v0.10.25/lib/node_modules/azure-cli/lib/commands/site._js:250:12)
+
