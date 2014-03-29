@@ -31,11 +31,11 @@ User.plugin(timestamps);
 exports.UrlModel = mongoose.model('Urls', Url);
 exports.UserModel = mongoose.model('Users', User);
 
-var url = new exports.UrlModel({
-  url: 'http://www.google.com',
-  title: 'google.com',
-  base_url: 'http://localhost:4568',
-  code: '25367'
-});
+// var url = new exports.UrlModel({
+//   url: 'http://www.espn.com',
+//   title: 'espn.com',
+//   base_url: 'http://localhost:4568',
+//   code: '25479'
+// });
 
-url.save();
+// url.save();

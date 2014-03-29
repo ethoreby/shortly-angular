@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
-    <link rel="stylesheet" type="text/css" href="shortlyapp.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="/lib/angular.min.js"></script>
     <script src="/app.js"></script>
     <!-- <script src="/lib/jquery.js"></script>
@@ -15,10 +15,25 @@
 
   <body>
     <h1>Shortly</h1>
+    <div class='navigation' ng-controller='navController'>
+      <ul>
+        <li ng-repeat='header in headers'>
+          <a href='#'class='{{header.class}}' ng-click='header.actions()'>
+          {{header.text}}
+          </a>
+        </li>
+      </ul>
+    </div>
     <div ng-controller="linkController">
-      <li ng-repeat="link in links">
-        {{ link.title }}
-      </li>
+      <div class='link' ng-repeat="link in links">
+        <img src='/redirect_icon.png'/>
+        <div class='info'>
+          <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+          <div class='title'>{{link.title}}</div>
+          <div class='original'>{{link.url}}</div>
+          <a href='{{link.base_url}}/{{link.code}}'>{{link.base_url}}/{{link.code}}</a>
+        </div>
+      </div>
     </div>
     <%- body %>
   </body>
